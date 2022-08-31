@@ -1,7 +1,7 @@
 # HRTransNet: HRFormer-Driven Two-Modality Salient Object Detection
 
 The paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology.
-
+https://ieeexplore.ieee.org/document/9869666
 
 Code is coming soon.
 
