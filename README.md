@@ -3,7 +3,7 @@
 The paper has been online published by IEEE Transactions on Circuits and Systems for Video Technology.
 https://ieeexplore.ieee.org/document/9869666
 
-[paper](https://github.com/liuzywen/SwinNet/blob/main/SwinNetRevision.pdf)
+[paper](https://github.com/liuzywen/HRTransNet/blob/main/HRTransNet_HRFormer-Driven_Two-Modality_Salient_Object_Detection.pdf)
 
 
 ## Training Set
