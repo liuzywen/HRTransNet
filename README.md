@@ -3,6 +3,8 @@
 The paper has been online published by IEEE Transactions on Circuits and Systems for Video Technology.
 https://ieeexplore.ieee.org/document/9869666
 
+[paper](https://github.com/liuzywen/SwinNet/blob/main/SwinNetRevision.pdf)
+
 
 ## Training Set
 2185
