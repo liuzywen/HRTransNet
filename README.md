@@ -5,7 +5,7 @@ https://ieeexplore.ieee.org/document/9869666
 
 [paper](https://github.com/liuzywen/HRTransNet/blob/main/HRTransNet_HRFormer-Driven_Two-Modality_Salient_Object_Detection.pdf)
 
-![main](images/main.pdf)
+![main](images/main.png)
 ## Training Set
 2185
 https://drive.google.com/file/d/1fcJj4aYdJ6N-TvvxSZ_sBo-xhtd_w-eJ/view?usp=sharing
