@@ -80,11 +80,11 @@ Baidu：https://pan.baidu.com/s/1EtKTNVPQAW_iLm8pA1POmQ
 If you find the information useful, please consider citing:
 
 ```
-@article{liu2022HRTransNet,
+@article{Tang2023RTransNet,
   author={Tang, Bin and Liu, Zhengyi and Tan, Yacheng and He, Qian},
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
   title={HRTransNet: HRFormer-Driven Two-Modality Salient Object Detection}, 
-  pages={1--16},
-  year={2022}}
+  pages={728--742},
+  year={2023}}
 ```
 If you have any question, please email  liuzywen@ahu.edu.cn
