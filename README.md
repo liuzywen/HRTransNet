@@ -48,8 +48,9 @@ Our RGB-T SOD Parameter:
 
 
 Our LF SOD Parameter: 
-链接：https://pan.baidu.com/s/1LseHlA2t7NrbwkVtu89BTA 
-提取码：ebo3 
+链接：https://pan.baidu.com/s/1hPUQLM0U-s9mzVDVor27iA 
+提取码：d459 
+
 
 
 ##  RGBD Result Saliency Maps 
