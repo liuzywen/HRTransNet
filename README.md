@@ -41,8 +41,9 @@ Our RGB-D SOD Parameters:
 
 
 Our RGB-T SOD Parameter: 
-链接：https://pan.baidu.com/s/1cwgKDDHxXOyR9SOEAdUI6w 
-提取码：6jg7 
+链接：https://pan.baidu.com/s/1sEKEMGYKJD9eT-bvUxvamA 
+提取码：jhkb 
+
 
 
 
