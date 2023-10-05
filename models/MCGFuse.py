@@ -10,6 +10,25 @@ import torch.nn as nn
 from models.coordatt import CoordAtt
 import numpy as np
 
+# class Mlp(nn.Module):
+#     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):
+#         super().__init__()
+#         out_features = out_features or in_features
+#         hidden_features = hidden_features or in_features
+#         self.fc1 = nn.Linear(in_features, hidden_features)
+#         self.act = act_layer()
+#         self.fc2 = nn.Linear(hidden_features, out_features)
+#         self.drop = nn.Dropout(drop)
+#
+#     def forward(self, x):
+#         x = self.fc1(x)
+#         x = self.act(x)
+#         x = self.drop(x)
+#         x = self.fc2(x)
+#         x = self.drop(x)
+#         return x
+
+
 class MCG(nn.Module):
     def __init__(self, rgb_inchannels, depth_inchannels,h,w):
         super(MCG, self).__init__()
@@ -18,15 +37,12 @@ class MCG(nn.Module):
         self.convTo2 = nn.Conv2d(rgb_inchannels*2, 2, 3, 1, 1)
         self.sig = nn.Sigmoid()
         self.global_avg_pool = nn.AdaptiveAvgPool2d(1)
-
         self.global_max_pool = nn.AdaptiveMaxPool2d(1)
-        self.fc1 = nn.Conv2d(self.channels, self.channels // 16, 1, bias=False)
         self.relu = nn.ReLU()
-        self.fc2 = nn.Conv2d(self.channels // 16, self.channels, 1, bias=False)
 
-        self.MlpConv = nn.Conv2d(self.channels, self.channels, 1, bias=False)
         self.h = h
         self.w = w
+        self.coordAttention = CoordAtt(rgb_inchannels, rgb_inchannels, self.h, self.w)
 
     def forward(self,r,d):
         d = self.convDtoR(d)
@@ -42,18 +58,7 @@ class MCG(nn.Module):
         Ga = r * ga
         Gm = d * gm
 
-        GmA = self.global_avg_pool(Gm)
-
-        GmA_fc = self.fc2(self.relu(self.fc1(GmA)))
-        GmA_fc = self.sig(GmA_fc)
-        Gm1 = Gm * GmA_fc
-
-        Gm1M = self.global_max_pool(Gm1)
-        Gm1M_conv = self.MlpConv(Gm1M)
-        Gm2 = self.sig(Gm1M_conv)
-
-        Gm_out = Gm1 * Gm2
-        # Gm_out = self.coordAttention(Gm)
+        Gm_out = self.coordAttention(Gm)
         out = Gm_out + Ga
 
         return out
