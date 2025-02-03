@@ -87,6 +87,6 @@ If you find the information useful, please consider citing:
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
   title={HRTransNet: HRFormer-Driven Two-Modality Salient Object Detection}, 
   pages={728--742},
-  year={2023}}
+  year={2022}}
 ```
 If you have any question, please email  liuzywen@ahu.edu.cn
